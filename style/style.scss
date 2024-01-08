@@ -6,15 +6,16 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style-type: none;
+}
+
 header{
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    li{
-        list-style-type: none;
-    }
 }
 
 .header_settings, .header_search, nav{
@@ -61,7 +62,8 @@ header{
         width: 100%;
         padding: .5em;
         flex-wrap: wrap;
-        justify-content: space-between;}
+        justify-content: space-between;
+    }
     .header_search_wrapper{
         display: flex;
         width: 100%;
@@ -136,7 +138,11 @@ nav{
                 }
             }
             li, a {
-                color: $primary-font-color
+                color: $primary-font-color;
+
+                &:hover{
+                    color: white;
+                }
             }
             
         }
@@ -147,4 +153,57 @@ nav{
                 padding: .2em;
             }
         }
+}
+
+main{
+    background-color: red;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    .offers_wrapper{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1em;
+            width: 28%;
+            height: 50vh;
+            li{
+                // background-image: url('../src/img01.jpg');
+                background-color: seagreen;
+                background-repeat: no-repeat;
+                background-size: cover;
+                flex-grow: 1;
+                border-radius: .5em;
+                display: flex;
+                flex-direction: column;
+                padding: 2em;
+                justify-content: center;
+                button{
+                    width: 20%;
+                    padding: .5em;
+                    border-radius: .2em;
+                    bordeR: none;
+                    outline: none;
+                }
+            };
+            li:nth-child(2){
+                justify-content: center;
+                align-items: center;
+                button{
+                    width: auto;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+        ul:nth-child(1){
+            width: 70%;
+        }
+    }
 }

@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+}
+
 header {
   width: 100%;
   height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-header li {
-  list-style-type: none;
 }
 
 .header_settings, .header_search, nav {
@@ -135,10 +136,65 @@ nav ul li a {
 nav ul li, nav ul a {
   color: #666666;
 }
+nav ul li:hover, nav ul a:hover {
+  color: white;
+}
 nav a {
   color: #e6e6e6;
   text-decoration: none;
 }
 nav a i {
   padding: 0.2em;
+}
+
+main {
+  background-color: red;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+}
+main .offers_wrapper {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+main .offers_wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+  width: 28%;
+  height: 50vh;
+}
+main .offers_wrapper ul li {
+  background-color: seagreen;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+}
+main .offers_wrapper ul li button {
+  width: 20%;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  bordeR: none;
+  outline: none;
+}
+main .offers_wrapper ul li:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+main .offers_wrapper ul li:nth-child(2) button {
+  width: auto;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .offers_wrapper ul:nth-child(1) {
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */
